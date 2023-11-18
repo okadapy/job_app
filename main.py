@@ -23,6 +23,7 @@ import aiohttp
 
 DEFAULT_HEADERS = {"Content-Type": "application/json", "Accept": "*/*"}
 AMPLITUDE_KEY = "<KEY HERE>"
+TG_KEY = "<KEY HERE>"
 dp = Dispatcher()
 
 
@@ -261,7 +262,7 @@ async def handle_message(message: Message) -> None:
 
 
 async def main() -> None:
-    bot = Bot("<API KEY HERE>", parse_mode=ParseMode.MARKDOWN)
+    bot = Bot(TG_KEY, parse_mode=ParseMode.MARKDOWN)
     await dp.start_polling(bot)
 
 
